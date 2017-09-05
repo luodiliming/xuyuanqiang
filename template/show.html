@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>显示文章</title>
+<script src="template/bootstrap/bootstrap/js/bootstrap.min.js"></script>
+<link href="template/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="template/css/index.css" rel="stylesheet">
+</head>
+<body>
+<div class='article'>
+	<!--GET到主页面，内容后面的属性key=$k（键名嘛） GET['key']就可以知道！-->
+	<?php
+	$xuhao = $_GET['key'];
+
+     echo "
+
+    <a href='./wenindex.php'>返回首页</a>
+	<h3>{$db[$xuhao]['name']}</h3>
+	<div>
+
+		<p class='content' style='overflow-y :auto; height: 168px; width: 438px;'>{$db[$xuhao]['content']}</p>
+	</div>";
+
+
+	?>
+<!--这里因为上面的PHP环境结束了，这里想用$xuhao变量，就必须用到PHP环境，然后KEY在带着这里面的需要，进行之前的修改！-->
+	<!--这里a标签跳转时要带着第几号，就需要key=第几个了！后面加上$xuhao 就可以知道，点击编辑，编辑页面也就能GET到编辑哪个了！  $xuhao容器已经知道从主页GET到的第几个了！-->
+	<a href='wenindex.php?a=editshow&key=<?php echo $xuhao ?>'>编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href='wenindex.php?a=shanchu&key=<?php echo $xuhao ?>'>删除</a>
+
+
+	<!--<p class='time'>发布于：<em>{$shi}</em></p>-->
+	<!--<img src='{$db[$xuhao]['thumb']}' alt='' style='width:50px; hieght:50px display:block'>;-->
+</div>
+
+</body>
+</html>

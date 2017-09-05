@@ -1,0 +1,32 @@
+1： zcdb.php         注册数据库
+2： db.php           留言板数据库
+3:  wenindex.php     进入文件管理系统。默认会找到Article类
+4： index.php         进入留言板中转！
+——————————————————————————————————我是分割线----------------------------
+
+
+1： controller        类文件
+ controller类:  Artcle.class.php  文件管理类
+                 Code.class.php    验证码类
+                 Houtai.class.php  登陆注册，后台类
+                 Index.class.php    进入登陆类
+                 ly.class.php      进入留言板类
+                 Member.class.php  登陆注册，运行类
+                 最后一个类是 ajax发送来的存在数据库里，在发送信息回AJAX做确定用的！
+
+2：css样式         是给注册和登陆加的样式
+
+3：font_f81yvdixykuaOpd9   字库
+
+4：libs   内有 字库和和C类
+
+5：template  文章管理模板html.
+
+6：tu     装图片的
+
+7：view   注册登陆模板
+
+
+
+
+登录后台代码 /?c=index&entry

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>HouDun许愿墙</title>
+	<link rel="stylesheet" href="view/css/index.css" />
+	<script type="text/javascript" src='view/js/jquery-1.7.2.min.js'></script>
+	<script type="text/javascript" src='view/js/index.js'></script>
+	<script src="view/js/ajax.js"></script>
+</head>
+<body>
+	<div id='top'>
+		<span id='send'></span>
+	</div>
+
+	<div id='main'>
+		<!--因为这里的主页是通过一个ly类和entry方法进来的，已经在entry方法中调用了数据库！所以在这可直接遍历数据库了！-->
+		<!--3：打开PHP环境,因为要用到对存在数据库内的内容进行遍历！  注意事项，echo时是双引号，只好用单引号！-->
+		<?php
+			foreach($db as $k=>$v){
+				$num = mt_rand(1,5);
+				echo "<dl class='paper a{$num}'>
+					<dt>
+						<span class='username'>{$v['name']}</span>
+						<span class='num'>No.00001</span>
+					</dt>
+					<dd class='content'>{$v['content']}</dd>
+					<dd class='bottom'>
+						<span class='time'>今天08:30</span>
+						<a href='' class='close'></a>
+					</dd>
+				</dl>";
+
+			}
+?>
+
+	</div>
+
+	<div id='send-form'>
+		<p class='title'><span>许下你的愿望</span><a href="" id='close'></a></p>
+
+		<!--1首先！许愿！form表单提交，之后被AJAX拦截！请看js文件夹中的AJAX文件。-->
+		<form action="" id="wishform" name='wish'>
+			<p>
+				<label for="username">昵称：</label>
+				<input type="text" name='username' id='username'/>
+			</p>
+			<p>
+				<label for="content">愿望：(您还可以输入&nbsp;<span id='font-num'>50</span>&nbsp;个字)</label>
+				<textarea name="content" id='content'></textarea>
+				<div id='phiz'>
+					<img src="view/images/phiz/zhuakuang.gif" alt="抓狂" />
+					<img src="view/images/phiz/baobao.gif" alt="抱抱" />
+					<img src="view/images/phiz/haixiu.gif" alt="害羞" />
+					<img src="view/images/phiz/ku.gif" alt="酷" />
+					<img src="view/images/phiz/xixi.gif" alt="嘻嘻" />
+					<img src="view/images/phiz/taikaixin.gif" alt="太开心" />
+					<img src="view/images/phiz/touxiao.gif" alt="偷笑" />
+					<img src="view/images/phiz/qian.gif" alt="钱" />
+					<img src="view/images/phiz/huaxin.gif" alt="花心" />
+					<img src="view/images/phiz/jiyan.gif" alt="挤眼" />
+				</div>
+			</p>
+			<input type="submit" value="" id='send-btn' style="border: none;width: 120px;height: 50px;" />
+		</form>
+	</div>
+<!--[if IE 6]>
+	<script type="text/javascript" src="js/iepng.js"></script>
+	<script type="text/javascript">
+		DD_belatedPNG.fix('#send,#close,.close', 'background');
+	</script>
+	<![endif]-->
+</body>
+</html>

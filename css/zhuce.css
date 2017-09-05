@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.hezi{
+    width: 1100px;
+    /*height: 700px;*/
+    /*border: 1px solid blue;*/
+    margin: 0 auto;
+    background:url(../tu/lantian.jpg) no-repeat;
+    position: relative;
+    padding-top: 65px;
+
+}
+.hezi .tianya{
+    height: 34px;
+    margin: 0 auto;
+    width: 146px;
+    background: url(../tu/tianya.png);
+    /*border: 1px solid blue;*/
+}
+.hezi .quanq{
+    background: url(../tu/quanq.png);
+    height: 24px;
+    margin: 0 auto;
+    width: 282px;
+    margin-top: 10px;
+}
+.hezi .zuoxian{
+    border-top:1px solid #eee;
+    width: 226px;
+    display: block;
+    background: #eee;
+    margin-left: 120px;
+    margin-top: -9px;
+    /*position: absolute;*/
+    /*left:522px;*/
+    /*top:159px;*/
+
+}
+.hezi .youxian{
+    border-top:1px solid #eee;
+    width: 226px;
+    display: block;
+    background: #eee;
+    margin-top: 1px;
+    margin-left: 766px;
+    /*position: absolute;*/
+    /*left:852px;*/
+    /*top:159px;*/
+
+}
+
+.hezi .zc{
+    margin: 0 auto;
+    margin-top: 12px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 35px;
+    color: #2965b1;
+    /*position: absolute;*/
+    /*left: 776px;*/
+}
+
+.hezi .biao{
+        margin: 0 auto;
+        /*border: 1px solid red;*/
+        width: 740px;
+       margin-top: 50px;
+     position: relative;
+}
+
+.hezi .biao .form-name{
+    color: #333;
+    font-size: 18px;
+    height: 36px;
+    line-height: 36px;
+    margin-left:159px ;
+}
+
+.hezi .biao .ming{
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding: 3px 10px;
+    width: 255px;
+}
+
+.hezi .biao .mima{
+    margin-left: 15px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding: 3px 10px;
+    width: 255px;
+}
+
+.hezi .biao .yanzheng{
+    margin-left: 28px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding: 3px 10px;
+    width: 255px;
+}
+
+.hezi .biao .ym{
+    margin-left: 220px;
+    display: block;
+}
+
+.hezi .biao .dl{
+    width: 277px;
+    background: #4ba0d7 none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 233px;
+    border: 0 none;
+
+}
+.hezi .biao .shengming{
+    position: absolute;
+    top:218px;
+    left:230px;
+}
+.hezi .biao .tongyi{
+    font: 12px/20px "微软雅黑",Arial;
+    color: #000;
+    text-align: center;
+    top:215px;
+    left:258px;
+    position: absolute;
+}
+.hezi .biao .xieyi{
+    color: #2965b1;
+    text-decoration: none;
+    font: 12px/20px "微软雅黑",Arial;
+    display: block;
+    position: absolute;
+    top:214px;
+    left:353px;
+
+}
+
+/*底部盒子开始*/
+.hezi .biao .dibu{
+    width: 740px;
+    height: 105px;
+    /*border: 1px solid red;*/
+}
+
+.hezi .biao .dibu .xiaohe{
+    width: 550px;
+    height: 20px;
+    /*border: 1px solid red;*/
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.hezi .biao .dibu .xiaohe a{
+    color: #555;
+    text-decoration: none;
+    font: 12px/20px "微软雅黑",Arial;
+    margin-left: 9px;
+}
+
+.hezi .biao .dibu .shijian{
+    color: #555;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    font: 12px/20px "微软雅黑",Arial;
+}
+
+

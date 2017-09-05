@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>文章标题</title>
+<script src="template/bootstrap/bootstrap/js/bootstrap.min.js"></script>
+<link href="template/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="template/css/index.css" rel="stylesheet">
+</head>
+<body>
+<div id="formBox">
+	<form action="wenindex.php?a=edit" method="post" enctype="multipart/form-data">
+	<div id='form-style1'>
+		<!--在 PHP环境中GET到主页跳转过来的KEY.得到几号！-->
+		<!--本页面和本页面用GET的！，主页通过中转跳到修改主页上，-->
+		<!--index.html点击时带的有key几号，这里就需要GET到 key几号！放到一个变量中，好用-->
+
+		<!--是通过电脑地址栏传参的，所以用GET！-->
+		<?php
+		$p = $_GET['key'];
+		echo "
+		<dl>
+			<dt>文章标题:</dt>
+			<dd>
+	<!--注意！在php环境中！echo 有双引号，下面的就不能用双引号，有冲突！如果有变量必须要用双引号！那就需要转意-->
+																<!--value默认是的数据库里面的第几号中的title-->
+				<input style='width:100%;' type='text' name='name' value=\"{$db[$p]['name']}\">
+			</dd>
+		</dl>
+		<dl>
+			<dt>正文:</dt>
+			<dd>
+				<textarea style='width:100%;height:120px;' name='content'>{$db[$p]['content']}</textarea>
+			</dd>
+		</dl>
+		<dl>
+			<dt></dt>
+			<dd>
+
+				<!--<input type='file' name='pic'>-->
+				<br><br>
+	<!--表单中放置一个隐藏域，设置value的默认值是上面GET到主页key带过来的第几号！到editf方法在抓隐藏域的name。就知道
+	默认值是第几号了！用修改方法也就知道修改的是第几项了！
+		隐藏域的特点是！隐藏不显示！。抓他的name.就可获得他的第几号。那就知道第几项-->
+
+				<input type='hidden' name='id' value=\"{$p}\">
+				<input class='btn' type='submit' value='提交'>
+			</dd>
+		</dl>";
+		?>
+	</div>
+	</form>
+</div>	
+</body>
+		<!--一个没搞懂的问题，为什么我下面虽然注释掉了。还会报错-->
+
+
+<!--<img src='{$db[$p]['thumb']}' alt='' style='width:50px; hieght:50px display:block'>  37行-->
+
+<!--<img src='{$db[$p]['thumb']}' alt='' style='width:50px; hieght:50px'> 43行-->
+
+</html>
